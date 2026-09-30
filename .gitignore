@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# commit the lockfile (overrides global gitignore)
+!package-lock.json
