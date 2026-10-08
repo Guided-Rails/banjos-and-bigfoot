@@ -5,6 +5,9 @@ const year = new Date().getFullYear();
 <footer>
 	<div class="container">
 		<span>&copy; {year} Guided Rails, LLC. All rights reserved.</span>
+		<nav>
+			<a href="https://catberry.io" target="_blank" rel="noopener noreferrer">Catberry</a>
+		</nav>
 	</div>
 </footer>
 
@@ -23,5 +26,14 @@ const year = new Date().getFullYear();
 		font-size: 0.875rem;
 		line-height: 1.25rem;
 		color: #4b5563;
+	}
+
+	nav a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	nav a:hover {
+		color: var(--brand);
 	}
 </style>
