@@ -1,0 +1,54 @@
+---
+import Header from "../components/Header.astro";
+
+const siteTitle = "Banjos & Bigfoot";
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title ? `${title} — ${siteTitle}` : siteTitle}</title>
+	</head>
+	<body>
+		<Header title={siteTitle} />
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--brand: #8e4433;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	body {
+		margin: 0;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		background: #fff;
+		color: #111827;
+		font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	main {
+		flex: 1;
+		width: 100%;
+		max-width: 42rem;
+		margin-inline: auto;
+		padding: 4rem 1.5rem;
+	}
+</style>
