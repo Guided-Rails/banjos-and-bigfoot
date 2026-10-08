@@ -1,0 +1,27 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer>
+	<div class="container">
+		<span>&copy; {year} Guided Rails, LLC. All rights reserved.</span>
+	</div>
+</footer>
+
+<style>
+	footer {
+		border-top: 8px solid var(--brand);
+	}
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		gap: 1.5rem;
+		width: min(100vw - 3rem, 80rem);
+		margin-inline: auto;
+		padding-block: 2rem;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+		color: #4b5563;
+	}
+</style>
